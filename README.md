@@ -10,33 +10,54 @@ This repository contains the dataset, reference files, and supporting materials 
 
 This study systematically analyzes research published between **2020 and 2025**, identifying how artificial intelligence (AI) is applied to support different stages of the video game development process.
 
-A total of **135 studies** were included after a rigorous multi-stage screening process based on PRISMA-ScR guidelines.
+A total of **135 studies** were included after a rigorous multi-stage screening process based on **PRISMA-ScR guidelines**.
 
 ---
 
 ## 📁 Repository Structure
 
 ### `/data`
-Structured datasets used during the review process:
+Structured datasets organized by **time period**:
+
+#### `/data/2020-2024`
+Original dataset used in the primary study:
 
 - `ScopingReview.xlsx` → Master dataset (screening + coding)
-- `included_studies.csv` → Final set of included papers (n = 135)
-- `excluded_studies.csv` → Full-text excluded papers with reasons
-- `deduplicated_records.csv` → Records after duplicate removal
-
-### `/raw`
-Original exports from digital libraries:
-
+- `Articulos_SCOPING_sin_duplicados.xlsx` → Deduplicated records
 - `ACM_export.csv`
 - `IEEE_export.csv`
 - `SCOPUS_export.csv`
 - `WOS_export.csv`
 
-### `/pdfs`
-Full-text articles (when legally distributable):
+#### `/data/2025`
+Extended dataset for the update:
 
-- `/included` → Papers included in the review
-- `/excluded` → Papers reviewed but excluded (optional)
+- `All Articles.xlsx` → Aggregated dataset for 2025
+- `ACM.xlsx`
+- `IEEE.xlsx`
+- `SCOPUS.xlsx`
+- `WOS.xlsx`
+
+This separation enables:
+
+- Clear distinction between **original review (2020–2024)** and **update (2025)**
+- Temporal analysis of AI trends in game development
+- Full reproducibility of the data collection process
+
+---
+
+### `/pdfs`
+Full-text articles organized by **year range and inclusion decision**:
+
+#### `/pdfs/2020-2024`
+- `/Included` → Studies included in the review
+- `/Excluded` → Studies excluded after full-text screening
+
+#### `/pdfs/2025`
+- `/Included` → Studies included in the update
+- `/Excluded` → Studies excluded after full-text screening
+
+---
 
 ### `/bib`
 Bibliographic data:
@@ -47,7 +68,7 @@ Bibliographic data:
 
 ## 🧪 Review Scope
 
-This scoping review maps the use of AI across the **game development lifecycle**, including:
+This scoping review maps the use of AI across the **video game development lifecycle**, including:
 
 - Procedural Content Generation (PCG)
 - Level and environment design
@@ -64,9 +85,9 @@ This scoping review maps the use of AI across the **game development lifecycle**
 Studies were included if they:
 
 - Focus on AI-assisted tools or methods **applied to game development**
-- Present a technical implementation, framework, or system
+- Present a **technical implementation, framework, or system**
 - Were published between **2020 and 2025**
-- Report at least one **evaluation, use case, or measurable benefit**
+- Include **evaluation, validation, or practical application**
 
 ---
 
@@ -74,16 +95,16 @@ Studies were included if they:
 
 Studies were excluded if they:
 
-- Focus exclusively on **serious games, education, or simulation (without development focus)**
-- Lack technical or methodological contribution
-- Do not include evaluation, validation, or practical application
+- Focus exclusively on **serious games, education, or simulation** (without development focus)
+- Lack **technical or methodological contribution**
+- Do not include **evaluation or validation**
 - Are inaccessible or incomplete
 
 ---
 
 ## 🔍 Methodology
 
-The review follows the **PRISMA-ScR framework** for scoping reviews, including:
+The review follows the **PRISMA-ScR framework**, including:
 
 1. Identification of studies across multiple databases
 2. Removal of duplicates
@@ -97,21 +118,38 @@ The review follows the **PRISMA-ScR framework** for scoping reviews, including:
 
 Each study was classified according to five analytical dimensions:
 
-- **Technical Aspect**
-- **Methodological Design**
-- **Application Domain**
-- **Validation Approach**
-- **Reported Contributions**
+- **Technical Aspect (TA)**
+- **Methodological Design (MD)**
+- **Application Domain (AD)**
+- **Validation Approach (VA)**
+- **Reported Contributions (RC)**
 
 ---
 
 ## ♻️ Reproducibility
 
-All datasets, classification decisions, and bibliographic records are included to support:
+This repository ensures full reproducibility by providing:
 
-- Replication of the study
-- Extension of the dataset
-- Comparative analyses
+- Raw database exports
+- Deduplicated datasets
+- Screening decisions (included/excluded)
+- Full-text articles (when legally distributable)
+- Coding schema and final dataset
+
+---
+
+## 📌 Notes on Dataset Expansion
+
+The repository explicitly distinguishes between:
+
+- **Initial dataset (2020–2024)**
+- **Extended dataset (2025)**
+
+This allows:
+
+- Replication of the original study
+- Longitudinal analysis of trends
+- Future extensions of the dataset
 
 ---
 
@@ -145,4 +183,4 @@ Please contact the authors for reuse permissions.
 If you use this dataset, please cite:
 
 > Vidal-Silva, C., Barriga, N., Besoaín, F.  
-> *AI-Assisted Tools in the Video Game Development Process: A Scoping Literature Review* (2026)
+> *AI-Assisted Tools in the Video Game Development Process: A Scoping Literature Review*
